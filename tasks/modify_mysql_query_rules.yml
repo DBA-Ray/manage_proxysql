@@ -11,4 +11,3 @@
     state: present
     load_to_runtime: True
     save_to_disk: True
-
