@@ -3,13 +3,13 @@
 - include: password.yml
 
 - include: modify_mysql_users.yml
-  when: modify_mysql_users
+  when: modify_mysql_users | default (False)
 
 - include: modify_mysql_query_rules.yml
-  when: modify_mysql_query_rules
+  when: modify_mysql_query_rules | default (False)
 
 - include: modify_mysql_servers.yml
-  when: modify_mysql_servers
+  when: modify_mysql_servers | default (False)
 
 - include: modify_global_variables.yml
-  when: modify_global_variables
+  when: modify_global_variables | default (False)

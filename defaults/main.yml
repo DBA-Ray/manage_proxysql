@@ -1,10 +1,5 @@
 ---
 # defaults file for proxysql_ray
-# Select the trigger conditions
-modify_mysql_users: False
-modify_mysql_query_rules: False
-modify_mysql_servers: False
-modify_global_variables: False
 # mysql_users variables
 business_user: dxz
 # mysql_query_rules variables

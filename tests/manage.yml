@@ -2,5 +2,11 @@
 - hosts: proxysql
   gather_facts: False
   remote_user: root
+  vars:
+    # Select the trigger conditions
+    modify_mysql_users: False
+    modify_mysql_query_rules: False
+    modify_mysql_servers: False
+    modify_global_variables: False
   roles:
     - dba_ray.manage_proxysql
