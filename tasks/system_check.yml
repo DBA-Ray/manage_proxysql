@@ -1,0 +1,16 @@
+# 系统环境检测，排除干扰
+
+- name: 关闭firewalld
+  service: name=firewalld state=stopped enabled=no
+
+- name: 永久关闭selinux
+  lineinfile:
+    dest: /etc/selinux/config
+    regexp: "^SELINUX="
+    line: "SELINUX=disabled"
+
+- name: 安装基础软件包
+  yum:
+    name: "{{ packages }}"
+    state: latest
+  run_once: False

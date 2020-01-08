@@ -1,17 +1,9 @@
 ---
-# vars file for proxysql_ray
-# 基础软件包
+# vars file for manage_mysql
 packages:
-  - vim
-  - lrzsz
-  - telnet
-  - net-tools
-  - tree
-  - unzip
-  - libaio
-  - numactl
-  - perl-DBD-mysql
-  - expect
+  - python2-PyMySQL.noarch
+  - python36-PyMySQL.noarch
+  - MySQL-python
 
 vars_files:
   - secrets.yml
