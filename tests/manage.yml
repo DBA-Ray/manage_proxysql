@@ -1,5 +1,5 @@
 ---
-- hosts: proxysql
+- hosts: "{{ deploy_hosts }}"
   gather_facts: False
   remote_user: root
   vars:

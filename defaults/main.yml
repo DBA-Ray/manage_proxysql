@@ -1,5 +1,7 @@
 ---
 # defaults file for proxysql_ray
+# Which hosts to deploy
+deploy_hosts: proxysql_pro1
 # mysql_users variables
 business_user: dxz
 # mysql_query_rules variables
