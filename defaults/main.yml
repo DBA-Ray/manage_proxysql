@@ -17,7 +17,7 @@ dbserver: 10.0.64.3 #which mysql server to add
 olddbserver: 10.0.64.3 #which mysql server to delete
 # mysql_scheduler variables
 interval_ms: 3000
-filename: adjust_mysql_query_rules.sh
+filename: auto_adjust_mysql_query_rules.sh
 arg1: "{{ admin_login_password }}"
 del_filename: adjust_mysql_query_rules.sh
 del_interval_ms: 3000
