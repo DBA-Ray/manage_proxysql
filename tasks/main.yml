@@ -3,6 +3,7 @@
 - include: password.yml
 
 - include: system_check.yml
+  tags: [check]
 
 - include: modify_mysql_users.yml
   when: modify_mysql_users | default (False)

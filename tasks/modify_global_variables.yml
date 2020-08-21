@@ -1,3 +1,14 @@
+- name: Check for global variables
+  proxysql_global_variables:
+    login_user: 'admin'
+    login_password: "{{ admin_login_password }}"
+    variable: "{{ global_variables }}"
+    register: proxysql_variable
+
+- name: Get MySQL version for human read
+  debug:
+    msg: "The {{ global_variables }} of {{ ansible_hostname }} is: {{ proxysql_variable | json_query(\"msg\") }}"
+
 - name: Modify global variables
   proxysql_global_variables:
     login_user: 'admin'

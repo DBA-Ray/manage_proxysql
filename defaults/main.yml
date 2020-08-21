@@ -1,16 +1,17 @@
 ---
 # defaults file for proxysql_ray
 # Which hosts to deploy
-deploy_hosts: proxysql_pro1
-# mysql_users variables
-business_user: dxz
-# mysql_query_rules variables
-cache_ttl: 10
-# mysql_servers variables
-mysql_port: 3377
-max_connections: 10000
-dbserver: 10.0.7.7
-olddbserver: 10.0.64.3
+deploy_hosts: proxysql_pro2
 # global_variables
 global_variables: 'mysql-server_version'
-global_variables_value: '8.0.19'
+global_variables_value: '8.0.21'
+# mysql_query_rules variables
+cache_ttl: 1
+# mysql_users variables
+username: test # if username is same,it will modify this user's password
+del_username: dxz-t
+# mysql_servers variables
+mysql_port: 3377
+max_connections: 2000
+dbserver: 10.0.7.7 #which mysql server to add
+olddbserver: 10.0.64.3 #which mysql server to delete
