@@ -9,9 +9,15 @@ global_variables_value: '8.0.21'
 cache_ttl: 1
 # mysql_users variables
 username: test # if username is same,it will modify this user's password
-del_username: dxz-t
+del_username: test
 # mysql_servers variables
 mysql_port: 3377
 max_connections: 2000
-dbserver: 10.0.7.7 #which mysql server to add
+dbserver: 10.0.64.3 #which mysql server to add
 olddbserver: 10.0.64.3 #which mysql server to delete
+# mysql_scheduler variables
+interval_ms: 3000
+filename: adjust_mysql_query_rules.sh
+arg1: "{{ admin_login_password }}"
+del_filename: adjust_mysql_query_rules.sh
+del_interval_ms: 3000

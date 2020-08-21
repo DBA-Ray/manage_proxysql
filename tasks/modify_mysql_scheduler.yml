@@ -1,0 +1,22 @@
+- name: Add or modify proxysql scheduler
+  proxysql_scheduler:
+    login_user: 'admin'
+    login_password: "{{ admin_login_password }}"
+    active: 1
+    interval_ms: "{{ interval_ms }}"
+    filename: "/var/lib/proxysql/{{ filename }}"
+    arg1: "{{ arg1 }}"
+    state: present
+    load_to_runtime: True
+    save_to_disk: True
+    
+- name: Delete proxysql scheduler
+  proxysql_scheduler:
+    login_user: 'admin'
+    login_password: "{{ admin_login_password }}"
+    interval_ms: "{{ del_interval_ms }}" #Determine the required value to delete proxysql scheduler
+    filename: "/var/lib/proxysql/{{ del_filename }}" #Determine the required value to delete proxysql scheduler
+    state: absent
+    force_delete: True
+    load_to_runtime: True
+    save_to_disk: True

@@ -1,7 +1,8 @@
 ---
 # tasks file for proxysql_ray
 - include: password.yml
-
+  tags: [manage_user,delete_user]  
+  
 - include: system_check.yml
   tags: [check]
 
@@ -16,3 +17,6 @@
 
 - include: modify_global_variables.yml
   when: modify_global_variables | default (False)
+  
+- include: modify_mysql_scheduler.yml
+  when: modify_mysql_scheduler | default (False)
