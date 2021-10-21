@@ -4,7 +4,7 @@
 deploy_hosts: proxysql_pro2
 # global_variables
 global_variables: 'mysql-server_version'
-global_variables_value: '8.0.21'
+global_variables_value: '8.0.27'
 # mysql_query_rules variables
 cache_ttl: 1
 # mysql_users variables
